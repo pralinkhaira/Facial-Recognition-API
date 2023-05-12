@@ -22,6 +22,20 @@ This API allows users to upload images and receive facial recognition results, i
 
 5. Send a POST request to the `/detect` endpoint with an image file in the request body. You can use tools such as Postman or cURL to send requests.
 
+    - If using Postman:
+        1. Open Postman and create a new request.
+        2. Select `POST` as the HTTP method.
+        3. Enter `http://localhost:5000/detect` as the request URL.
+        4. Select the `Body` tab.
+        5. Select `form-data` as the request body type.
+        6. Add a new key-value pair to the request body, where the key is `file` and the value is the path to the image file.
+        7. Click `Send`.
+
+    - If using cURL:
+        ```
+        curl -X POST -F 'file=@path/to/image.jpg' http://localhost:5000/detect
+        ```
+
 6. Receive the facial recognition results in JSON format, including the number of detected faces, the coordinates of the bounding boxes, and the corresponding labels.
 
 ## API Endpoints
@@ -59,6 +73,16 @@ Detect faces in an uploaded image.
   ]
 }
 ```
+
+The response contains the following fields:
+
+- `num_faces`: The number of detected faces in the uploaded image.
+- `faces`: An array of face objects, each containing the following fields:
+    - `x`: The x-coordinate of the top-left corner of the bounding box around the face.
+    - `y`: The y-coordinate of the top-left corner of the bounding box around the face.
+    - `width`: The width of the bounding box around the face.
+    - `height`: The height of the bounding box around the face.
+    - `label`: The label or name associated with the detected face.
 
 ## Dependencies
 
