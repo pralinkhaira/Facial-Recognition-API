@@ -17,7 +17,7 @@ This API allows users to upload images and receive facial recognition results, i
 4. Run the Flask server:
 
     ```
-    python app.py
+    python face_recognition.py test.jpg haarcascade_frontalface_default.xml
     ```
 
 5. Send a POST request to the `/detect` endpoint with an image file in the request body. You can use tools such as Postman or cURL to send requests.
