@@ -93,6 +93,21 @@ The response contains the following fields:
 
 - `haarcascade_frontalface_default.xml`: Cascade classifier for face detection.
 
+## Update Info
+
+Version 1.1 (Updated May 2023)
+
+- Implemented error handling mechanisms to gracefully handle exceptions during execution.
+- Added input validation to ensure that the image file and cascade classifier file exist.
+- Improved code modularity by separating the face detection logic from file handling and display logic.
+- Implemented command-line arguments for specifying the image file and cascade classifier file.
+- Added performance optimization techniques, such as reducing image size and exploring more efficient algorithms.
+- Extended the code to handle multiple faces by detecting and drawing bounding boxes around all faces.
+- Tuned parameters, such as scaleFactor and minNeighbors, to improve face detection accuracy.
+- Improved user interface by exploring options for a more user-friendly graphical user interface (GUI).
+- Modified the code to perform real-time face detection using a webcam or video stream.
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
